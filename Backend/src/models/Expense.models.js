@@ -19,7 +19,7 @@ const expenseSchema = new mongoose.Schema({
         enum: ['Makan', 'Kuliah', 'Hiburan', 'Transportasi', 'Perlengkapan'] },
     date: {
         type: Date,
-        default: Date.now,
+        required: true,
     },
 });
 
