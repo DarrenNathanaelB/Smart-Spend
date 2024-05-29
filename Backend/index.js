@@ -16,17 +16,17 @@ app.use(bodyParser.json());
 connectDB();
 
 // CRUD operations for expenses
-app.post('/addExpense', expenseController.addExpense);
-app.get('/getExpenses', expenseController.getExpenses);
-app.get('/getExpense/:id', expenseController.getExpenseById);
-app.get('/getExpensesByCategory/:category', expenseController.getExpensesByCategory);
-app.get('/getTotalExpense', expenseController.getTotalExpense);
-app.put('/updateExpense/:id', expenseController.updateExpense);
-app.delete('/deleteExpense/:id', expenseController.deleteExpense);
+app.post('/api/addExpense', expenseController.addExpense);
+app.get('/api/getExpenses', expenseController.getExpenses);
+app.get('/api/getExpense/:id', expenseController.getExpenseById);
+app.get('/api/getExpensesByCategory/:category', expenseController.getExpensesByCategory);
+app.get('/api/getTotalExpense', expenseController.getTotalExpense);
+app.put('/api/updateExpense/:id', expenseController.updateExpense);
+app.delete('/api/deleteExpense/:id', expenseController.deleteExpense);
 
 // Account operations
-app.post('/register', accountController.register);
-app.post('/login', accountController.login);
+app.post('/api/register', accountController.register);
+app.post('/api/login', accountController.login);
 
 
 app.listen(port, () => {
